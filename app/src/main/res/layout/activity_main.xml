@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:background="@drawable/background"
+    tools:context="com.android.calculator.MainActivity">
+
+    <TextView
+
+        android:layout_marginTop="3dp"
+        android:layout_width="match_parent"
+        android:textSize="30sp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:textAlignment="textEnd"
+        android:background="@drawable/back"
+        android:gravity="bottom"
+        android:textCursorDrawable="@color/colorPrimary"
+        android:cursorVisible="true"
+        android:text="0"
+        android:id="@+id/display"
+        android:layout_height="50dp" />
+
+    <LinearLayout
+        android:layout_marginTop="70dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3" >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:background="@drawable/my_button_bg"
+            android:text="AC"
+            android:id="@+id/ac"
+            android:textColor="@drawable/click1" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:background="@drawable/my_button_bg"
+            android:text="C"
+            android:id="@+id/c"
+            android:textColor="@drawable/click1" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_button_bg"
+            android:layout_weight="1"
+            android:text="About"
+            android:textSize="30sp"
+            android:id="@+id/abt"
+            android:textColor="@drawable/click1" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="120dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3" >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:background="@drawable/my_button_bg"
+            android:text="+"
+            android:id="@+id/plus"
+            android:textColor="@drawable/click1" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/my_button_bg"
+            android:text="-"
+            android:textSize="30sp"
+            android:id="@+id/minus"
+            android:textColor="@drawable/click1" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_button_bg"
+            android:layout_weight="1"
+            android:text="*"
+            android:textSize="30sp"
+            android:id="@+id/mul"
+            android:textColor="@drawable/click1" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_marginTop="170dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3" >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:background="@drawable/my_button_bg"
+            android:text="/"
+            android:id="@+id/div"
+            android:textColor="@drawable/click1" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:background="@drawable/my_button_bg"
+            android:id="@+id/point"
+            android:text="."
+            android:textColor="@drawable/click1" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_button_bg"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:text="+/-"
+            android:id="@+id/plmi"
+            android:textColor="@drawable/click1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="220dp"
+        android:weightSum="3" >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_button_bg"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:text="0"
+            android:id="@+id/zero"
+            android:textColor="@drawable/click" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/my_button_bg"
+            android:text="1"
+            android:textSize="30sp"
+            android:id="@+id/one"
+            android:textColor="@drawable/click" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/my_button_bg"
+            android:text="2"
+            android:textSize="30sp"
+            android:id="@+id/two"
+            android:textColor="@drawable/click" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="270dp"
+        android:weightSum="3" >
+
+        <Button
+            android:layout_width="0dp"
+            android:textSize="30sp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_button_bg"
+            android:layout_weight="1"
+            android:text="3"
+            android:id="@+id/three"
+            android:textColor="@drawable/click" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:background="@drawable/my_button_bg"
+            android:text="4"
+            android:id="@+id/four"
+            android:textColor="@drawable/click" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/my_button_bg"
+            android:text="5"
+            android:textSize="30sp"
+            android:id="@+id/five"
+            android:textColor="@drawable/click" />
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="320dp"
+        android:weightSum="3" >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_button_bg"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:text="6"
+            android:id="@+id/six"
+            android:textColor="@drawable/click" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/my_button_bg"
+            android:text="7"
+            android:textSize="30sp"
+            android:id="@+id/seven"
+            android:textColor="@drawable/click" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/my_button_bg"
+            android:text="8"
+            android:textSize="30sp"
+            android:id="@+id/eigth"
+            android:textColor="@drawable/click" />
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="370dp"
+        android:weightSum="2" >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_button_bg"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:text="9"
+            android:id="@+id/nine"
+            android:textColor="@drawable/click" />
+
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/my_button_bg"
+            android:text="="
+            android:textSize="30sp"
+            android:id="@+id/equals"
+            android:textColor="@drawable/click1" />
+
+    </LinearLayout>
+
+</RelativeLayout>
