@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         eight=(Button)findViewById(R.id.eigth);
         nine=(Button)findViewById(R.id.nine);
 
-
+        display.setSelected(true);
 
         ac.setOnClickListener(new View.OnClickListener() {
             @Override
