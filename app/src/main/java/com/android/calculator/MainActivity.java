@@ -8,6 +8,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+
+
+
     TextView display;
     int pointstat=0,buttonStat=0,len;
     String di;
@@ -15,6 +19,32 @@ public class MainActivity extends AppCompatActivity {
     Button zero,one,two,three,four,five,six;
     float num1=0,num2=0;
     Button seven,eight,nine;
+
+    void testpoint()
+    {
+        int i;
+        for(i=0;i<display.getText().toString().length();i++)
+        {
+            if(display.getText().toString().charAt(i)=='.')
+            {
+                pointstat=1;
+            }
+        }
+    }
+
+
+    void removezero()
+    {
+        String test;
+        if(display.getText().toString().charAt(0)=='0')
+        {
+            test=display.getText().toString().replace('0',' ');
+            display.setText(test);
+        }
+
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
         one.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                display.setText(display.getText()+"1");
+                display.setText(display.getText()+"1"); removezero();
             }
         });
 
@@ -69,14 +99,16 @@ public class MainActivity extends AppCompatActivity {
         point.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                testpoint();
                 if(pointstat!=1) {
                     display.setText(display.getText() + ".");
-                    pointstat++;
+                    pointstat=1;
                 }
                 else
                 {
                     Toast.makeText(getApplicationContext(),"Can't use two points",Toast.LENGTH_LONG).show();
                 }
+
             }
         });
 
@@ -91,6 +123,14 @@ public class MainActivity extends AppCompatActivity {
                     len = di.length();
                     di = di.substring(0, len - 1);
                     display.setText(di);
+                }
+                int i;
+                for(i=0;i<display.getText().toString().length();i++)
+                {
+                    if(display.getText().toString().charAt(i)!='.')
+                    {
+                        pointstat=0;
+                    }
                 }
             }
         });
@@ -131,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
         two.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                display.setText(display.getText()+"2");
+                display.setText(display.getText()+"2"); removezero();
             }
         });
 
@@ -143,7 +183,7 @@ public class MainActivity extends AppCompatActivity {
         three.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                display.setText(display.getText()+"3");
+                display.setText(display.getText()+"3"); removezero();
             }
         });
 
@@ -153,7 +193,7 @@ public class MainActivity extends AppCompatActivity {
         four.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                display.setText(display.getText()+"4");
+                display.setText(display.getText()+"4");removezero();
             }
         });
 
@@ -162,7 +202,7 @@ public class MainActivity extends AppCompatActivity {
         five.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                display.setText(display.getText()+"5");
+                display.setText(display.getText()+"5");removezero();
             }
         });
 
@@ -172,7 +212,7 @@ public class MainActivity extends AppCompatActivity {
         six.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                display.setText(display.getText()+"6");
+                display.setText(display.getText()+"6");removezero();
             }
         });
 
@@ -182,6 +222,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 display.setText(display.getText()+"7");
+                removezero();
             }
         });
 
@@ -191,6 +232,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 display.setText(display.getText()+"8");
+                removezero();
             }
         });
 
@@ -199,7 +241,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 display.setText(display.getText()+"9");
-                pointstat=0;
+                removezero();
             }
         });
 
@@ -217,6 +259,7 @@ public class MainActivity extends AppCompatActivity {
                 buttonStat=2;
                 num1=Float.parseFloat(display.getText().toString());
                 display.setText("0");
+                pointstat=0;
             }
         });
 
@@ -272,6 +315,7 @@ public class MainActivity extends AppCompatActivity {
                     num2 = Float.parseFloat(display.getText().toString());
                     display.setText(Float.toString(num1 * num2));
                 }
+                pointstat=1;
             }
         });
 
@@ -281,6 +325,5 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),"Developed By:Surya Bhusal\nConnect to me on github: sbhusal123\nGmail:suryabhusal11@gmail.com",Toast.LENGTH_LONG).show();
             }
         });
-
     }
 }
