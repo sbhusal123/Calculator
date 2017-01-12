@@ -1,6 +1,5 @@
 package com.android.calculator;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -10,7 +9,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     TextView display;
-    int pointstat=0,buttonStat=0;
+    int pointstat=0,buttonStat=0,len;
+    String di;
     Button ac,c,abt,plus,minus,add,div,point,plmin,equals,mul;
     Button zero,one,two,three,four,five,six;
     float num1=0,num2=0;
@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         c=(Button)findViewById(R.id.c);
         display=(TextView) findViewById(R.id.display);
         plus=(Button)findViewById(R.id.plus);
+        abt=(Button)findViewById(R.id.abt);
         minus=(Button)findViewById(R.id.minus);
         mul=(Button)findViewById(R.id.mul);
         equals=(Button) findViewById(R.id.equals);
@@ -73,6 +74,26 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        c.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(display.getText().toString().length()!=1) {
+                    di = display.getText().toString();
+                    len = di.length();
+                    di = di.substring(0, len - 1);
+                    display.setText(di);
+                }
+            }
+        });
+
+
+
+
+
+
+
+
         plmin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -246,7 +267,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        abt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"Developed By:Surya Bhusal\nConnect to me on github: sbhusal123\nGmail:suryabhusal11@gmail.com",Toast.LENGTH_LONG).show();
+            }
+        });
 
     }
 }
