@@ -41,6 +41,9 @@ public class MainActivity extends AppCompatActivity {
         seven=(Button)findViewById(R.id.seven);
         eight=(Button)findViewById(R.id.eigth);
         nine=(Button)findViewById(R.id.nine);
+
+
+
         ac.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,6 +64,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
         point.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -74,6 +79,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+
+
 
         c.setOnClickListener(new View.OnClickListener() {
             @Override
