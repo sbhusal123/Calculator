@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         five=(Button)findViewById(R.id.five);
         six=(Button)findViewById(R.id.six);
         seven=(Button)findViewById(R.id.seven);
-        eight=(Button)findViewById(R.id.eigth);
+        eight=(Button)findViewById(R.id.eight);
         nine=(Button)findViewById(R.id.nine);
 
         display.setSelected(true);
